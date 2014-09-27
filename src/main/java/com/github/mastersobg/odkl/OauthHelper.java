@@ -1,6 +1,7 @@
 package com.github.mastersobg.odkl;
 
 import com.github.mastersobg.odkl.auth.ApiConfig;
+import com.github.mastersobg.odkl.photoGrabber.PhotoGrabber;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -46,6 +47,6 @@ public class OauthHelper {
     public static void main(String []args) throws IOException {
         api = new OdklApi(ApiConfig.APP_ID, ApiConfig.APP_PUBLIC_KEY, ApiConfig.APP_SECRET_KEY,ApiConfig.ACCESS_TOKEN , ApiConfig.REFRESH_TOKEN);
 
-        new PhotoGrabber(api).grabPhotos("563733877946");
+        new PhotoGrabber(api).grabUserPhotos("563733877946");
     }
 }
